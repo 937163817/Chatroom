@@ -46,7 +46,8 @@ class Server:
             try:#在server不斷接收message,只負責傳送給除了發話人以外的人
                 recvedMsg = myconnection.recv(1024).decode()
                 if recvedMsg:
-                    self.tellOthers(connNumber, recvedMsg)
+                    print(mydict[connNumber], ':', recvedMsg)
+                    self.tellOthers(connNumber, mydict[connNumber]+' :'+recvedMsg)
                 else:
                     pass
 
