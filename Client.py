@@ -7,7 +7,9 @@ class Client:
         self.sock = sock
         self.sock.connect((host, port))
         self.sock.send(b'1')#server決定要接收什麼，和server確認可否進入(註冊)，以byte傳送至server
-
+        print(sock.recv(1024).decode())
+        nickName = input('input your nickname: ')
+        sock.send(nickName.encode())
     def sendThreadFunc(self):
         while True:
             try:
