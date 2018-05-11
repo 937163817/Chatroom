@@ -30,7 +30,7 @@ class Client:
                 print('Server is closed!')
 
 def main():
-    c = Client('localhost', 5550)#看要連到哪台server id
+    c = Client('140.138.145.73', 5550)#看要連到哪台server id
     th1 = threading.Thread(target=c.sendThreadFunc)
     th2 = threading.Thread(target=c.recvThreadFunc)
     threads = [th1, th2]
