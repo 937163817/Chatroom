@@ -41,11 +41,7 @@ class Server:
                     pass
 
     def subThreadIn(self, myconnection, connNumber):
-        nickname = myconnection.recv(1024).decode()
-        mydict[myconnection.fileno()] = nickname
         self.mylist.append(myconnection)#append附/添加
-        print('connection', connNumber, ' has nickname :', nickname)
-        self.tellOthers(myconnection , 'system:'+mydict[connNumber]+' into chat')
         while True:
             try:#在server不斷接收message,只負責傳送給除了發話人以外的人
                 recvedMsg = myconnection.recv(1024).decode()
@@ -59,7 +55,8 @@ class Server:
                     self.mylist.remove(myconnection)
                 except:
                     pass
-
+                print(mydict[connNumber], 'exit, ', len(mylist), ' person left')
+                self.tellOthers(connNumber, 'SYSTEM: '+mydict[connNumber]+' exit the chat room')
                 myconnection.close()
                 return
 
