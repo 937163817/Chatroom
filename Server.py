@@ -61,7 +61,7 @@ class Server:
 
 
 def main():
-    s = Server('140.138.145.73', 5550)
+    s = Server('140.138.145.73', 5550)#server端自己的網址
     while True:
         s.checkConnection()#不斷地去check,隨時可接收新訊並負責傳送
 
