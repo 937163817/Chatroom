@@ -1,5 +1,13 @@
+from PyQt5.QtWidgets import QMainWindow,QApplication
+import example2_ui
+import sys
 import socket
 import threading
+
+class Main(QMainWindow,example2_ui.Ui_MainWindow):
+    def __init__(self):
+        super(self.__class__,self).__init__()
+        self.setupUi(self)
 
 class Client:
     def __init__(self, host, port):
@@ -42,4 +50,8 @@ def main():
     t.join()
 
 if __name__ == "__main__":
-    main()
+    app=QApplication(sys.argv)
+    MainWindow=Main()
+    MainWindow.show()
+    #main()
+    sys.exit(app.exec_())
