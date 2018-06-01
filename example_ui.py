@@ -1,0 +1,92 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'C:\Users\pc01\Desktop\mainwindow.ui'
+#
+# Created by: PyQt5 UI code generator 5.10.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(481, 691)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.nicknameEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.nicknameEdit.setGeometry(QtCore.QRect(80, 30, 141, 21))
+        self.nicknameEdit.setObjectName("nicknameEdit")
+        self.passwordEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.passwordEdit.setGeometry(QtCore.QRect(310, 30, 151, 21))
+        self.passwordEdit.setObjectName("passwordEdit")
+        self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_3.setEnabled(False)
+        self.lineEdit_3.setGeometry(QtCore.QRect(240, 30, 61, 21))
+        self.lineEdit_3.setMouseTracking(False)
+        self.lineEdit_3.setAcceptDrops(True)
+        self.lineEdit_3.setFrame(False)
+        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_2.setEnabled(False)
+        self.lineEdit_2.setGeometry(QtCore.QRect(20, 30, 61, 21))
+        self.lineEdit_2.setMouseTracking(False)
+        self.lineEdit_2.setAcceptDrops(False)
+        self.lineEdit_2.setFrame(False)
+        self.lineEdit_2.setObjectName("lineEdit_2")
+        self.pushButton_add = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_add.setGeometry(QtCore.QRect(20, 60, 441, 41))
+        font = QtGui.QFont()
+        font.setFamily("Agency FB")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_add.setFont(font)
+        self.pushButton_add.setStyleSheet("")
+        self.pushButton_add.setCheckable(False)
+        self.pushButton_add.setAutoRepeat(False)
+        self.pushButton_add.setAutoExclusive(False)
+        self.pushButton_add.setObjectName("pushButton_add")
+        self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
+        self.textEdit.setGeometry(QtCore.QRect(20, 120, 441, 481))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(255, 170, 127))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Button, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 170, 127))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Button, brush)
+        brush = QtGui.QBrush(QtGui.QColor(255, 170, 127))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Button, brush)
+        self.textEdit.setPalette(palette)
+        self.textEdit.setObjectName("textEdit")
+        self.pushButton_del = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_del.setGeometry(QtCore.QRect(20, 610, 441, 31))
+        font = QtGui.QFont()
+        font.setFamily("Agency FB")
+        font.setPointSize(12)
+        font.setBold(True)
+        font.setWeight(75)
+        self.pushButton_del.setFont(font)
+        self.pushButton_del.setObjectName("pushButton_del")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 481, 22))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.lineEdit_3.setText(_translate("MainWindow", "Password :"))
+        self.lineEdit_2.setText(_translate("MainWindow", "Nickname :"))
+        self.pushButton_add.setText(_translate("MainWindow", "Add"))
+        self.pushButton_del.setText(_translate("MainWindow", "Del"))
+
